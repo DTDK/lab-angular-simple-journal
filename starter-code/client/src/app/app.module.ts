@@ -3,18 +3,30 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
+
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { JournalServicesService } from './services/journal-services.service';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+
+const routes: Routes = [
+  { path: '', component: HomepageComponent }
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [JournalServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
