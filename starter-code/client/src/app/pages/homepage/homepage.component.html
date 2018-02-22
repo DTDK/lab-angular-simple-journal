@@ -7,7 +7,8 @@
     <li *ngFor = "let journal of journals">
       {{ journal.title }}
       {{ journal.date }}
-
+      <a [routerLink] = "['/journal-entries', journal]">Details</a>
     </li>
   </ul>
 </div>
+

@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { JournalServicesService } from './services/journal-services.service';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { SingleEntryComponent } from './components/single-entry/single-entry.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent }
@@ -18,7 +19,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,
